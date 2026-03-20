@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형을 위한 단위</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html{
+            height: 100%;
+            font-size: 10px;
+        }
+
+        .px{
+            width: 1000px;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        @media screen and(max-width : 1024px) {
+            .pce{
+                width: 100%;
+            }
+        }
+
+        .pce{
+            width: 50%;
+            height: 100px;
+            background-color: lightcoral;
+            float: left;
+        }
+
+        .pce:nth-child(2){
+            background-color: lightcyan;
+        }
+
+        .vw{
+            width: 50vw; /* 50vw = 뷰포트 너비의 50% */
+            height: 100vh; /* 100vh = 뷰포트 높이의 100% */
+            background-color: lightsalmon;
+        }
+
+        @media screen and(max-width : 767px) {
+            .vw{
+                width: 80vw;
+                height: 50vh;
+            }
+        }
+
+        #all{
+            font-size: 20px;
+        }
+
+        .em{
+            font-size: 2em;
+        }
+
+        .rem{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        반응형을 위한 단위
+        <가변 그리드>
+        = 화면 크기에 따라 바뀌는(변화하는) 레이아웃, 요소의 크기, 요소의 위치
+
+        1. px
+        = 고정 단위, 픽셀 단위
+        = 화면 사이즈에 따라 변화가 생길 레이아웃에는 부여할 수 없는 단위
+        = 고정된 크기를 표현할 때 사용
+        = 화면을 줄이면 넘쳐나서 스크롤이 생기거나 레이아웃 배치가 깨질 수 있다
+
+        2. % (퍼센트)
+        = 상대 단위, 백분율 단위
+        = 화면 사이즈에 따라 비율이 변함
+        = 부모의 기준에 따라 비율을 분해
+
+        3. vh(viewport height), vw(viewport width)
+        = 뷰포트 단위, 화면 단위
+        = 화면 사이즈에 따라 비율이 변함
+        = 기기의 화면상 기준으로 폭을 지정하는 단위
+        = 1vh = 뷰포트 높이의 1% (화면 높이의 1%)
+        = 1vw = 뷰포트 너비의 1% (화면 너비의 1%)
+
+        4. em, rem
+        = 상대 단위, 폰트 단위
+        = 부모 기준을 기점으로 비율을 분해
+        = 부모크기가 14px이면 1em =14px, 2em = 28px... / 1rem = 10px, 2rem = 20px...
+        = rem은 루트 요소(html)의 폰트 크기를 기준으로 비율을 분해
+        = 기준이 없을때는 16px이 기본값으로 적용됨
+    -->
+
+    <div class="px">고정 단위(px)</div>
+
+    <div class="pce">비율값</div>
+    <div class="pce">비율값</div>
+
+    <div class="vw">뷰포트 단위(vw)</div>
+
+    <div id="all">
+        <div class="em">부모 기준으로 기점 변화</div>
+        <div class="rem">루트 기준으로 기점 변화</div>
+    </div>
+    
+</body>
+</html>
