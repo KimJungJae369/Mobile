@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+
+        td{
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div{
+            display: table;
+            border: 1px solid black;
+            text-align: center;
+            width: 80%;
+            height: 300px;
+            margin: 100px auto;
+        }
+
+        p{
+            display: table-cell;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        <table> 
+        = 표에 대한 성격
+        = 'box'의 성격이 있다 
+        = table은 부모의 역할로 안에 자식으로 존재하는 아이템은 td가 되어진다
+
+
+        <기본값>
+        1. display : table
+        = box-sizing : border-box
+        = table-layout : auto = td의 너비는 내용물의 너비에 따라 자동으로 지정                            
+
+        2. td
+        = 일정한 폭이 생성되지 않음
+        = 내용물의 너비에 따라 자동으로 지정
+
+        <td 성격과 같은 display : table-cell>
+        = display : table-cell = td의 성격과 같다
+        = vertical-align : middle : 수직상 중앙정렬
+        = 자동으로 폭의 너비를 지정                                    
+
+
+        border-collapse: collapse
+        = table의 테두리와 td의 테두리 사이간격을 유무를 설정하는 속성
+
+        text-indent
+        = 텍스트의 첫 줄을 들여쓰기 하는 속성
+
+        border-spacing
+        = table의 테두리와 td의 테두리 사이간격을 설정하는 속성
+
+        vertical-align 
+        - baseline : 기준선 정렬
+        - top : 위쪽 정렬
+        - middle : 수직 중앙 정렬
+        - bottom : 아래쪽 정렬
+    -->
+
+    <table>
+        <tr>
+            <td>table box <br> table box <br> table box</td>
+            <td>table box <br> table box <br> table box</td>
+        </tr>
+    </table>
+
+    <div>
+        <p>table-display <br> table-display <br> table-display</p>
+        <p>table-display <br> table-display <br> table-display</p>
+    </div>
+    
+</body>
+</html>
