@@ -93,8 +93,19 @@
         (1) 가변그리드 계산 방법
         = 요소의 폭값(요소의 실제 폭) / 부모의 폭값 * 100 = % 단위로 계산
 
-        (2)  3개의 박스를 표현
+        (2) 3개의 박스를 표현
         = 100% : 3 = 33.3%
+
+        @media screen and(max-width : 1024px) {
+        max-width : 1024px 이하의 화면에서 적용할 스타일
+        min-width : 1024px 이상의 화면에서 적용할 스타일
+            .img{
+                width: 50%;
+            }
+            p{
+                width: 48%;
+            }
+        }
     -->
 
     <header>Lorem Ipsum</header>

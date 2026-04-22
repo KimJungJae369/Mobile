@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;margin-bottom: 15px;
+}
+
+main{
+    width: 80vw;
+    overflow: hidden;
+    background-color: lightgray;
+    font-size: 20px;
+    display: table;
+    border-spacing: 10vw;
+    margin: auto;
+}
+
+main>div{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+section{
+    display: table;
+    width: 65%;
+    height: 30vh;
+    margin: 5vh auto;
+    border-spacing: 1vw;
+    table-layout: fixed;
+}
+
+article{
+    display: table-cell;
+    text-align: center;
+    border: 1px solid #333;
+    padding: 2%;
+    font-size: 13px;
+}
+
